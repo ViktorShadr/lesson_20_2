@@ -1,84 +1,142 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Блог</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    <style>
+        body {
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+        }
+
+        .tag {
+          color: #6c757d;
+          text-decoration: none;
+          margin-right: 10px;
+          transition: color 0.2s;
+        }
+
+        .tag:hover {
+          color: #0d6efd;
+          cursor: pointer;
+        }
+
+        footer {
+          background-color: #111;
+          color: white;
+        }
+
+        footer a {
+          color: #0d6efd;
+          text-decoration: none;
+        }
+
+        footer a:hover {
+          text-decoration: underline;
+        }
+    </style>
 </head>
 
-  <!-- Подключаем Bootstrap -->
-  <link
-    href="css/bootstrap.min.css"
-    rel="stylesheet"
-  >
 <body>
-    <nav class="navbar navbar-expand-lg bg-light border-bottom mb-4">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#">Blog</a>
-    <div>
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="#">Главная</a></li>
-        <li class="nav-item"><a class="nav-link active" href="#">О нас</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+
+<!-- ВЕРХНЕЕ МЕНЮ -->
+<nav class="navbar navbar-expand-lg navbar-custom border-bottom shadow-sm">
     <div class="container">
-  <h1 class="fw-bold mb-3">Добро пожаловать в наш блог!</h1>
-  <p class="text-muted mb-4">Ваши ежедневные новости и истории</p>
+        <a class="navbar-brand fw-bold" href="#">Blog</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-  <div class="row">
-    <!-- Левая колонка -->
-    <div class="col-md-8">
-      <div class="card mb-4">
-        <div class="card-body">
-          <h5 class="card-title">Заголовок</h5>
-          <p class="card-text">
-            Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет оценить значение модели развития...
-          </p>
-          <a href="#" class="btn btn-primary">Читать дальше</a>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link active" href="#">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">О нас</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
+            </ul>
         </div>
-      </div>
     </div>
+</nav>
 
-    <!-- Правая колонка -->
-    <div class="col-md-4">
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">О блоге</h5>
-          <p class="card-text">Это блог о различных интересных темах...</p>
-        </div>
-      </div>
+<!-- ОСНОВНОЙ КОНТЕНТ -->
+<main class="flex-grow-1 py-5">
+    <div class="container">
+        <div class="row">
+            <!-- ЛЕВАЯ КОЛОНКА -->
+            <div class="col-md-8">
+                <h1 class="fw-bold mb-3">Добро пожаловать в наш блог!</h1>
+                <p class="text-muted mb-4">Ваши ежедневные новости и истории</p>
 
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">Последние посты</h5>
-          <ul class="list-unstyled">
-            <li><a href="#">Последний пост 1</a></li>
-            <li><a href="#">Последний пост 2</a></li>
-          </ul>
-        </div>
-      </div>
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Заголовок</h5>
+                        <p class="card-text text-muted">Разнообразный и богатый опыт дальнейшее развитие различных форм
+                            деятельности позволяет оценить значение модели развития...</p>
+                        <a href="#" class="btn btn-primary btn-sm">Читать дальше</a>
+                    </div>
+                </div>
+            </div>
 
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Популярные теги</h5>
-          <p class="text-muted small">
-            #красивая #ночь #лучший #селфи #сон #дружба #мы #настроение #любовь #улыбка
-          </p>
+            <!-- ПРАВАЯ КОЛОНКА -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">О блоге</h5>
+                        <p class="card-text text-muted small">Это блог о различных интересных темах...</p>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Последние посты</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li><a href="#">Последний пост 1</a></li>
+                            <li><a href="#">Последний пост 2</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Популярные теги</h5>
+                        <p class="small text-muted">
+                            <a href="#" class="tag">#красивая</a>
+                            <a href="#" class="tag">#ночь</a>
+                            <a href="#" class="tag">#лучший</a>
+                            <a href="#" class="tag">#селфи</a>
+                            <a href="#" class="tag">#сон</a>
+                            <a href="#" class="tag">#дружба</a>
+                            <a href="#" class="tag">#улыбка</a>
+                            <a href="#" class="tag">#любовь</a>
+                            <a href="#" class="tag">#радость</a>
+                            <a href="#" class="tag">#вечер</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-</div>
-    <footer class="bg-light border-top mt-4 py-3">
-  <div class="container text-center">
-    <p class="mb-0 small">Почта для связи: <a href="mailto:info@blog.com">info@blog.com</a></p>
-  </div>
+</main>
+
+<!-- НИЖНИЙ ФУТЕР -->
+<footer class="footer-custom py-3 mt-auto">
+    <div class="container d-flex justify-content-between align-items-center">
+        <small>Почта для связи: <a href="mailto:info@blog.com">info@blog.com</a></small>
+        <div>
+            <a href="#" class="me-3 text-blue fs-4"><i class="fa-brands fa-vk"></i></a>
+            <a href="#" class="text-blue fs-4"><i class="fa-brands fa-telegram"></i></a>
+
+
+        </div>
+    </div>
 </footer>
 
 <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-

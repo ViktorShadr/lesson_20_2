@@ -1,0 +1,55 @@
+.footer-custom {
+  background-color: #A94FF4; /* фон */
+  color: white; /* текст */
+}
+.footer-custom a {
+  color: #ffcc00; /* цвет ссылок */
+}
+.footer-custom a:hover {
+  color: #ffffff; /* при наведении */
+}
+
+/* === Стили для навбара === */
+.navbar-custom {
+  background-color: #A94FF4;   /* фон */
+  color: #ffffff;              /* белый текст по умолчанию */
+}
+
+/* Цвет текста логотипа */
+.navbar-custom .navbar-brand {
+  color: #ffcc00;              /* жёлтый логотип */
+}
+
+/* Цвет ссылок меню */
+.navbar-custom .nav-link {
+  color: #f0f0f0;
+  transition: color 0.3s ease;
+}
+
+/* При наведении */
+.navbar-custom .nav-link:hover {
+  color: #ffcc00;
+}
+
+/* Активная ссылка */
+.navbar-custom .nav-link.active {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+body {
+  background-image: url("mypicture.jpg"); /* путь к твоей картинке */
+  background-size: cover;       /* заставляет картинку растянуться по экрану */
+  background-position: center;  /* центрирует картинку */
+  background-repeat: no-repeat; /* чтобы не повторялась */
+  background-attachment: fixed; /* чтобы фон не прокручивался при скролле */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.4); /* белый с 40% прозрачностью */
+  z-index: -1;
+}
+
